@@ -15,12 +15,10 @@ tests =
         -- Once you get the first test passing, remove the
         -- `skip <|` (just leave the comma) on the next two
         -- lines to continue!
-        , skip <|
-            test "Hello to a sample name" <|
+        , test "Hello to a sample name" <|
                 \() ->
                     Expect.equal "Hello, Alice!" (helloWorld (Just "Alice"))
-        , skip <|
-            test "Hello to another sample name" <|
+        , test "Hello to another sample name" <|
                 \() ->
                     Expect.equal "Hello, Bob!" (helloWorld (Just "Bob"))
         ]
