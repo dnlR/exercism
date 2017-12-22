@@ -24,3 +24,12 @@ pom.xml.asc
 .nrepl-port
 .idea
 
+# Elm
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
+
+# JavaScript
+node_modules
+.vscode
