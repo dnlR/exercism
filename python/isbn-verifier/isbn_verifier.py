@@ -1,21 +1,42 @@
 import re
 
 
-def verify(isbn):
-    r = re.compile("\d-\d{3}-\d{5}-[\d|Xx]|\d{9}[\d|Xx]")
+def clean_isbn(isbn: str) -> str:
+    return isbn.replace("-", "")
+
+
+def check_format_for_isbn(isbn: str) -> bool:
+    r = re.compile("\d{9}[\d|Xx]")
     match = r.match(isbn)
-    if match is None:
+    return match is not None and len(isbn) == 10
+
+
+def convert_isbn_to_digits_list(isbn: str) -> [str]:
+    return list(isbn)
+
+
+def apply_control_digit_rule(isbn: [str]) -> [str]:
+    if isbn[-1] == "X" or isbn[-1] == "x":
+        isbn[-1] = 10
+    return isbn
+
+
+def apply_formula_to_isbn(isbn: [str]):
+    results = [int(isbn[i]) * x for i, x in zip(range(0, 10),
+                                                range(10, 0, -1))]
+    results = sum(results)
+    return results % 11 == 0
+
+
+def verify(isbn: str) -> bool:
+    isbn = clean_isbn(isbn)
+
+    if not check_format_for_isbn(isbn):
         return False
 
-    isbn = isbn.replace("-", "")
-    if len(isbn) != 10:
-        return False
+    isbn = convert_isbn_to_digits_list(isbn)
+    isbn = apply_control_digit_rule(isbn)
 
-    isbn_digits = list(isbn)
-    if isbn_digits[-1] == "X" or isbn_digits[-1] == "x":
-        isbn_digits[-1] = 10
+    valid_isbn = apply_formula_to_isbn(isbn)
 
-    results = [int(isbn_digits[i]) * x for i, x in zip(range(0, 10),
-                                                       range(10, 0, -1))]
-
-    return sum(results) % 11 == 0
+    return valid_isbn
