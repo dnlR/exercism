@@ -15,17 +15,7 @@ def verify(isbn):
     if isbn_digits[-1] == "X" or isbn_digits[-1] == "x":
         isbn_digits[-1] = 10
 
-    isbn_digits = [int(digit) for digit in isbn_digits]
+    results = [int(isbn_digits[i]) * x for i, x in zip(range(0, 10),
+                                                       range(10, 0, -1))]
 
-    result = (isbn_digits[0] * 10 + \
-            isbn_digits[1] * 9 + \
-            isbn_digits[2] * 8 + \
-            isbn_digits[3] * 7 + \
-            isbn_digits[4] * 6 + \
-            isbn_digits[5] * 5 + \
-            isbn_digits[6] * 4 + \
-            isbn_digits[7] * 3 + \
-            isbn_digits[8] * 2 + \
-            isbn_digits[9] * 1) % 11
-
-    return result == 0
+    return sum(results) % 11 == 0
