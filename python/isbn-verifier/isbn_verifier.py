@@ -29,10 +29,3 @@ def verify(isbn):
             isbn_digits[9] * 1) % 11
 
     return result == 0
-
-
-if __name__ == '__main__':
-    print(verify('3-598-21508-8'))
-    print(verify('3-598-21507-X'))
-    print(verify('3598215088'))
-    print(verify('359821507X'))
