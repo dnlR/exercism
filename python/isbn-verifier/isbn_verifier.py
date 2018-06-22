@@ -21,7 +21,7 @@ def apply_control_digit_rule(isbn: [str]) -> [str]:
     return isbn
 
 
-def apply_formula_to_isbn(isbn: [str]):
+def apply_formula_to_isbn(isbn: [str]) -> bool:
     results = [int(isbn[i]) * x for i, x in zip(range(0, 10),
                                                 range(10, 0, -1))]
     results = sum(results)
