@@ -20,10 +20,10 @@ def encode(string):
     char_count = 0
     encoded_str = ""
 
-    for i, c in enumerate(string):
+    for idx, char in enumerate(string):
         char_count += 1
-        if i + 1 == len(string) or c != string[i + 1]:
-            encoded_str += str(char_count) + c if 1 < char_count else c
+        if idx + 1 == len(string) or char != string[idx + 1]:
+            encoded_str += str(char_count) + char if 1 < char_count else char
             char_count = 0
 
     return encoded_str
