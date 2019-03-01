@@ -36,3 +36,5 @@ repl-temp-*
 # JavaScript
 node_modules
 .vscode
+
+.exercism
