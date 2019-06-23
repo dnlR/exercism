@@ -1,0 +1,14 @@
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\HelloWorld.deps.json
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\HelloWorld.runtimeconfig.json
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\HelloWorld.runtimeconfig.dev.json
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\HelloWorld.dll
+D:\code\exercism\csharp\hello-world\bin\Debug\netcoreapp2.1\HelloWorld.pdb
+D:\code\exercism\csharp\hello-world\obj\Debug\netcoreapp2.1\HelloWorld.csprojAssemblyReference.cache
+D:\code\exercism\csharp\hello-world\obj\Debug\netcoreapp2.1\HelloWorld.csproj.CoreCompileInputs.cache
+D:\code\exercism\csharp\hello-world\obj\Debug\netcoreapp2.1\HelloWorld.AssemblyInfoInputs.cache
+D:\code\exercism\csharp\hello-world\obj\Debug\netcoreapp2.1\HelloWorld.AssemblyInfo.cs
+D:\code\exercism\csharp\hello-world\obj\Debug\netcoreapp2.1\HelloWorld.dll
+D:\code\exercism\csharp\hello-world\obj\Debug\netcoreapp2.1\HelloWorld.pdb
