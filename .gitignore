@@ -1,5 +1,6 @@
 # Kotlin/Java
 .gradle
+gradle
 build
 # Compiled class file
 *.class
