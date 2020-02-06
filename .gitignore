@@ -75,6 +75,8 @@ node_modules
 
 .vscode
 
+.editorconfig
+
 # User-specific files
 *.rsuser
 *.suo
