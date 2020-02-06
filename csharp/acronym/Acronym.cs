@@ -9,6 +9,6 @@ public static class Acronym
         var phraseWords = phrase.Split(splitters, StringSplitOptions.RemoveEmptyEntries);
 
         return phraseWords
-            .Aggregate(string.Empty, (current, word) => current + char.ToUpperInvariant(word[0]));
+            .Aggregate(string.Empty, (acronym, word) => acronym + char.ToUpperInvariant(word[0]));
     }
 }
